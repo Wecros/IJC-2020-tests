@@ -2,7 +2,9 @@
 # Date: 14/Apr/2020
 # first arg is optional
 
-path=$(realpath "$1")
+if [ -n "$1" ]; then
+	path=$(realpath "$1")
+fi
 cd tail
 echo TESTING TAIL
 if [ -n "$1" ]; then
